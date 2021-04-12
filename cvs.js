@@ -49,13 +49,13 @@ const req = https.request(options, (res) => {
       const cities = openCities.map((c) => c.city)
       console.log(
         yellowText,
-        `Vaccines available in ${cities} \n BOOK NOW: http://www.cvs.com/immunizations/covid-19-vaccine`,
+        `Vaccines available in ${cities} \n cvs last updated: ${lastUpdatedInCurrentTimeZone} \n BOOK NOW: https://www.cvs.com/vaccine/intake/store/covid-screener/covid-qns`,
         alertSound
       )
     } else {
       console.log(
         cyanText,
-        `No CVSes in ${stateAbbrev} with vaccines, last updated ${lastUpdatedInCurrentTimeZone}`
+        `No CVSes in ${stateAbbrev} with vaccines, cvs last updated ${lastUpdatedInCurrentTimeZone}`
       )
     }
   })
